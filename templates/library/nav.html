@@ -1,0 +1,22 @@
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="{% url 'book-list' %}">Главная</a>
+      
+
+      {% for category in categories %}
+      <a class="p-2 link-secondary" href="{% url 'book-list' %}?q={{ category.title }}">{{ category.title }}</a>
+      {% endfor %}
+      <a class="p-2 link-secondary" href="{% url 'feedback'%}">Обратная связь</a>
+
+      </div>
+    </div>
+  </header>
+       <style>
+       nav{ 
+        margin-left: 100px;
+        
+      }
+      
+    </style>
+  </div>
+</div>
